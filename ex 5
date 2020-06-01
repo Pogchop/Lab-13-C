@@ -1,0 +1,29 @@
+#include<stdio.h> 
+struct cust_st 
+{   
+    int acc_no;  
+    char cust_nm[30]; 
+    float bal;
+};
+struct tran_st 
+{    
+    int acc_no; 
+    char trantype;   
+    float amt;
+};
+int main() 
+{  
+    int choice=1;   
+    while(choice!=4)  
+    {    
+    printf("\nSelect choice from menu\n\n 1. Accept customer details\n 2.Record Withdrawal/Deposit transaction\n 3. Print Low Balance Report\n 4. Exit\n\n Enter choice: ");   
+    scanf(" %d", &choice);     
+    if(choice==1)          
+    addcust();    
+    else if(choice==2)  
+    rectran();    
+    else if(choice==3)     
+    prnlowbal();  
+    }    
+    return 0;
+}
